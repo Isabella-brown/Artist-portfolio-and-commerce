@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "http-proxy-middleware": "^2.0.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "vite-plugin-favicons-inject": "^2.1.0"
   }
 }
