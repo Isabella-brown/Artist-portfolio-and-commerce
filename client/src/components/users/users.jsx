@@ -1,46 +1,38 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const Users = () => {
 
-    const [user, setUser] = useState("")
-
-    useEffect(() => {
-
-
-        fetch("/api")
-            .then((res) => res.json())
-            .then((data) => {
-                setUser(data.user)
-            })
-    }, [])
-    return (
-        <div>
-            <h2>{user}</h2>
-        </div>
-    )
-}
-
-/* const [userData, setUserData] = useState([])
+  const [users, setUsers] = useState([])
 
   useEffect(() => {
-    fetch("/api").then(
-      res => res.json())
-      .then(
-        userData => setUserData(userData.message))
-  }, []);
+    axios.get('/api')
+      .then(res => {
+        setUsers(res.data)
+      }).catch(err => {
+        console.log(err)
+      })
+  }, [])
+
+
 
 
   return (
     <div>
 
-      {<p>{!userData ? "Loading..." :
-        userData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
+      <h1>User app</h1>
+
+      {users.map(user => (
+        <div key={user.id}>
+          <h1>{user.name}</h1>
+          <p>{user.age}</p>
+        </div>
+      ))
       }
-    </p>}
     </div>
-  );
+
+  )
 }
-*/
+
+
 export default Users
