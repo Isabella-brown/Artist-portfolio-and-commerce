@@ -9,6 +9,9 @@ app.use(cors({
     origin: "http://localhost:3000"
 }))
 
+app.get('/', (req, res) => {
+
+})
 
 
 app.get("/api", (req, res) => {
