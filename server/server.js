@@ -1,35 +1,53 @@
+require('dotenv').config()
+
 const express = require('express');
 const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require("body-parser");
-const helmet = require('helmet')
-require('dotenv').config()
 
-const app = express()
+
 
 const uri = process.env.MONGO_URI
 
-async function connect() {
-    try {
-        await mongoose.connect(uri)
-        console.log("Connected to MongoDB");
-    } catch (error) {
-        console.error(error)
-    }
-}
+const connectDB = require('./config/db')
 
-connect()
+const userRoutes = require('./routes/userRoutes')
 
 
+connectDB()
+
+const app = express();
+app.use(express.json())
 app.use(cors({
     origin: "http://localhost:3000"
 }))
 
+
+
+/*
 app.get('/', (req, res) => {
 
 })
+*/
 
 
+
+
+
+app.use('/api', userRoutes)
+
+
+const port = 5000;
+
+app.listen(port, () => console.log(`Server started on port ${port}`))
+
+
+
+
+
+
+
+/*
 app.get("/api", (req, res) => {
 
     res.send([{
@@ -45,14 +63,5 @@ app.get("/api", (req, res) => {
     ])
 
 
-    //res.json({ "users": ["one", "two", "three"] })
 
-})
-
-
-
-
-const port = 5000;
-
-app.listen(port, () => console.log(`Server started on port ${port}`))
-
+})*/
