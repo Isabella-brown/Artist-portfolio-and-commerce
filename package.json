@@ -13,6 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
     "concurrently": "^7.5.0",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^8.5.1",
