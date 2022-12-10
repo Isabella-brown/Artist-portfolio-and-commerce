@@ -7,7 +7,8 @@ import Navbar from './components/layout/navigation/Navbar';
 import Home from './Home';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout'
-
+import Signup from './components/forms/Signup';
+import Login from './components/forms/Login';
 
 const App = () => {
   return (
@@ -20,7 +21,9 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/works' element={<Works />} />
           <Route path='/shop' element={<Shop />} />
-          <Route path="/cart" element={<Checkout />}></Route>
+          <Route path="/cart" element={<Checkout />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </div>
     </Router>

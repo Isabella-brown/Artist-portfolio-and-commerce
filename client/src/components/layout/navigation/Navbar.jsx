@@ -29,6 +29,7 @@ const Navbar = () => {
                     <ul><AiOutlineInstagram /></ul>
                     <Link to="/login" style={{ textDecoration: 'none' }}> <ul>Login</ul></Link>
                     <Link to="/signup" style={{ textDecoration: 'none' }}><ul>Signup</ul></Link>
+                    <Link to="/logout" style={{ textDecoration: 'none' }}><ul>Logout</ul></Link>
                     <Link to="/cart"><Button><AiOutlineShopping /></Button></Link>
                 </Toolbar>
             </AppBar>
