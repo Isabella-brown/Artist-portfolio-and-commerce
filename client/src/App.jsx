@@ -4,7 +4,7 @@ import Shop from './pages/Shop';
 import About from './pages/About';
 import Works from './pages/Works';
 import Navbar from './components/layout/navigation/Navbar';
-import Home from './Home';
+import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout'
 import Signup from './components/forms/Signup';
