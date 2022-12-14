@@ -10,10 +10,13 @@ I set out to create a website with dual portfolio-hosting and e-commerce capabil
 * Styled-components
 
 Development
-*Vite 
+* Vite 
+
+Test Deployment
+* Netlify
 
 APIs
-*Axios
+* Axios
 
 **Backend**
 * Node
