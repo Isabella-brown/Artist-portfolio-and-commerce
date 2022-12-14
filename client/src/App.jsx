@@ -10,7 +10,10 @@ import Checkout from './pages/Checkout'
 import Signup from './components/forms/Signup';
 import Login from './components/forms/Login';
 
+
+
 const App = () => {
+
   return (
     <Router>
       <div className="app">
