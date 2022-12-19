@@ -21,6 +21,7 @@ const About__header = styled.h1`
 `
 const About__me = styled.p`
 display:flex;
+
 `
 const About__card = styled.div`
 height: 400px;
@@ -31,7 +32,13 @@ margin-top:100px
 `
 
 const About__container = styled.div`
-margin-left:40px;
+width: 700px;
+margin-left:30px;
 `
 
-export { About__container, About__card, About__me, Home__header, Profile__image, About__header, Flex__container }
+const About__me__header = styled.p`
+font-weight:bold;
+margin-top:40px;
+`
+
+export { About__me__header, About__container, About__card, About__me, Home__header, Profile__image, About__header, Flex__container }

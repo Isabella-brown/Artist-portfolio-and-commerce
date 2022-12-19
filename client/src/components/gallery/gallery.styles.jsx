@@ -46,10 +46,10 @@ opacity: 1;
 height: auto;
 display: block;
 filter:blur(10px)
-&:hover {
+/*&:hover {
     transition: .5s ease;
     filter:blur(0px);
-}
+}*/
 `
 
 const BlurText = styled.text`
@@ -71,13 +71,14 @@ top: 0;
 bottom:0px;
 left: 0;
 right: 0;
-height: 20%;
+height: 100%;
 width: 100%;
 &:hover{
     transition: .2s ease;
     opacity:1;
     color:white;
     background-color:#111212;
+    height:20%
 }
 `
 

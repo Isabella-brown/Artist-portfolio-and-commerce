@@ -1,5 +1,5 @@
 import React from 'react'
-import { About__container, About__card, About__me, Profile__image, Flex__container, About__header } from "./page.styles"
+import { About__me__header, About__container, About__card, About__me, Profile__image, Flex__container, About__header } from "./page.styles"
 import { AiOutlineInstagram } from 'react-icons/ai'
 
 const About = () => {
@@ -14,7 +14,15 @@ const About = () => {
             </About__card>
             <About__container>
                 <About__header>About me</About__header>
-                <About__me>About</About__me>
+                <About__me>My name is Isabella Brown and I am a self-taught artist specialising in 2D and 3D digital character art, and portraits in digital and traditional mediums.</About__me>
+                <About__me>My focus is on portraits, humanoid characters, and human anatomy.</About__me>
+                <About__me>If you have any questions regarding commissions or freelance services, please contact me at isabellabrownenquiries@gmail.com.</About__me>
+                <About__me__header>Awards and exhibitions:</About__me__header>
+                <About__me>Young Artist of the Year: 'Portrait of Emma', South West Art Academy, 2022</About__me>
+                <About__me>Open Exhibition: 'Self-Portrait of the Artist', South West Art Academy, 2021</About__me>
+                <About__me__header>Find me on:</About__me__header>
+                <About__me>Instagram: </About__me>
+                <About__me>Artstation: https://www.artstation.com/isabellabrown3</About__me>
             </About__container>
         </Flex__container>
     )
