@@ -21,8 +21,15 @@ export const NavLink = styled(Link)`
   &:hover {
     text-decoration:underline;
     color:grey;
+    font-size:21px;
   }
 `;
+
+export const SocialLink = styled.a`
+padding: 0 1rem;
+display:flex;
+text-decoration: none;
+`
 
 
 

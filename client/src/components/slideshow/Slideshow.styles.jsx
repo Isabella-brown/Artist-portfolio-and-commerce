@@ -54,6 +54,7 @@ justify-content: center;
 border:1px;
 border-color:black;
 
+
 `
 
 const Image = styled.img`
