@@ -1,0 +1,56 @@
+image: node:latest
+
+variables:
+  REACT_APP_BACKEND_URL: "http://my-backend.com"
+
+stages:
+  - build
+  - test
+  - deploy
+
+build_client:
+  stage: build
+  script:
+    - cd client
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - client/build
+
+build_server:
+  stage: build
+  script:
+    - cd server
+    - npm install
+  artifacts:
+    paths:
+      - server/node_modules
+
+test_server:
+  stage: test
+  script:
+    - cd server
+    - npm test
+
+deploy_client:
+  stage: deploy
+  script:
+    - cd client
+    - npm run deploy
+  environment:
+    name: production
+    url: https://my-frontend.com
+  only:
+    - master
+
+deploy_server:
+  stage: deploy
+  script:
+    - cd server
+    - npm run start:prod
+  environment:
+    name: production
+    url: http://my-backend.com
+  only:
+    - master

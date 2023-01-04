@@ -2,14 +2,20 @@ import React from 'react'
 import { BlurText, BlurImage, RowHeader, Container, Hero, Row, Image, Middle, Text } from "./gallery.styles"
 import images from "./gallery__images"
 
+
+
+
 const Gallery = () => {
+    function changeStyles() {
+        console.log("styles")
+    }
 
     return (
         <Hero>
             <RowHeader>Digital art - studies</RowHeader>
             <Row>
                 <Container>
-                    <Image src="https://cdna.artstation.com/p/assets/images/images/057/161/292/large/isabella-brown-unnamed.jpg?1670964031" />
+                    <Image src="https://cdna.artstation.com/p/assets/images/images/057/161/292/large/isabella-brown-unnamed.jpg?1670964031" onMouseEnter={changeStyles}/>
                     <Middle>
                         <Text>Female portrait study, Procreate</Text>
                     </Middle>

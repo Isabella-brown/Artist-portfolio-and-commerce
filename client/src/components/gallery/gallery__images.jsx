@@ -1,4 +1,8 @@
 import React from "react"
+import Gallery from './gallery';
+
+
+
 
 export const images = [
     {
